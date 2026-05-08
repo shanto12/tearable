@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tearable — three pages, all of them tearable</title>
+    <meta
+      name="description"
+      content="An interactive editorial study in three parts — a verlet-integrated cloth simulation rendered as three stackable, tearable pages."
+    />
+    <meta name="theme-color" content="#08090b" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <div class="vignette"></div>
+
+    <div class="layer-pill">Active page <b id="layer">1 / 3</b></div>
+
+    <div class="hint" id="hint">drag, pull, tear</div>
+
+    <div class="instructions">
+      <div class="item"><span class="key">Drag</span> Pull</div>
+      <div class="sep"></div>
+      <div class="item"><span class="key">Right click</span> Tear</div>
+      <div class="sep"></div>
+      <div class="item"><span class="key">⇧ Shift</span> Cut</div>
+    </div>
+
+    <div class="footer">
+      <div class="stats">
+        <span><b id="lks">—</b>links</span>
+        <span><b id="trn">—</b>tears</span>
+        <span><b id="fps">—</b>fps</span>
+        <span><b id="clock">—</b>local</span>
+      </div>
+      <div class="actions">
+        <button class="btn" id="drop" type="button">Drop pins</button>
+        <button class="btn primary" id="reset" type="button">Reset</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/app.ts"></script>
+  </body>
+</html>

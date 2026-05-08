@@ -1,0 +1,13 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+.netlify
+coverage
+.vite
+*.log
+.idea
+.vscode
